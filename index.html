@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" http-equiv="content-type" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-------------- Vue ---------------------->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+	<!--------- Icon ------------->
+	<script src="https://kit.fontawesome.com/635df44ae3.js" crossorigin="anonymous"></script>
+	<!--------- Maps -------------->
+	<script src="http://maps.google.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" type="text/javascript"></script>
+    <!------------- Sweet Alert -------------------->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+<!-------------- Script --------------------->
+<script>
+	swal({
+		title: "Hotspot Trial EasyNet",
+		text: "Selamat menikmati internet Trial kami sepuasnya...",
+		icon: "success",
+		button: "Okay!!",
+	});
+</script>
+<!-------------- /Script --------------------->
+
+
+	<nav class="navbar mb-6" role="navigation">
+		<div class="navbar-brand">
+			<a href="#" class="navbar-item"><img src="assets/img/logo.png" height="28"></a>
+		</div>
+		<div class="navbar-menu">
+			<div class="navbar-start has-text-weight-light">
+				<a class="navbar-item" href="#beranda" onClick=""><p class="is-size-5">Beranda</p></a>
+				<a class="navbar-item" href="#ftth"><p class="is-size-5">Paket</p></a>
+				<a class="navbar-item" href="#info"><p class="is-size-5">Info</p></a>
+			</div>
+			<div class="navbar-end has-text-weight-light">
+				<a class="navbar-item" href="#"><p class="is-size-5">Hotspot</p></a>
+				<div class="navbar-item">	
+					<div class="buttons">
+						<a class="button is-link is-rounded" href="https://wa.me/+6281222604342?=Saya%20ingin%20berlangganan%20EasyNet.%0ANama%3A%0AAlamat%3A%0APaket%3A" target="_blank"><p class="is-size-5">Berlangganan</p></a>
+					</div>
+				</div>
+				<div class="navbar-item">	
+					<div class="buttons">
+						<a class="button is-link is-rounded" href="https://wa.me/+6281222604342?=Halo%20kak%2C%20internet%20rumah%20kami%20bermasalah%20nih%0A%0ANama%3A%20%0AAlamat%3A"><p class="is-size-5">Customer Service</p></a>
+					</div>
+				</div>
+					
+			</div>
+		</div>
+	</nav>
+	<div class="container ">
+		<section id="beranda">
+		<div class="columns is-centered">
+			<div class="column mt-1">
+				<img src="assets/img/game.png">
+			</div>
+			<div class="column is-6 has-text-black">
+				<h1 class="is-size-3 has-text-centered has-text-weight-bold">Game Bebas Lag!</h1>
+				<p class="has-text-dark has-text-centered has-text-weight-light">-Bermain game tanpa nge-lag-</p><br>
+				<strong><p class="is-size-5">Bermain game online tanpa perlu khawatir Ping drop dan menjadi nomor satu di game anda.</p></strong><br>
+				<p style="font-size: 18px;">Dengan jaringan internet <strong>EasyNet</strong> kami anda tidak perlu khawatir jika ingin bermain game online seperti Mobile Legends Bang Bang, PUBGM, Free Fire, dll.</p>
+			</div>
+		</div>
+		<div class="columns">
+			<div class="column is-6">
+				<div class="column has-text-black">
+					<h1 class="is-size-3 has-text-centered has-text-weight-bold">Solusi Internet Hemat</h1>
+					<p class="has-text-dark has-text-centered has-text-weight-light">-Paket internet dijamin murah-</p><br>
+					<p class="is-size-5">Meskipun dengan harga internet yang murah tetapi kami selalu memberikan koneksi internet yang stabil, unlimited tanpa FUP, menggunakan Fiber Optic, gratis sewa alat, koneksi Download dan Upload yang simetris.</p><br>
+				</div>
+			</div>
+			<div class="column is-6">
+				<img src="assets/img/logo.png">
+			</div>
+		</div>
+		<div class="columns is-centered">
+			<div class="column mt-1">
+				<a href="#"><img src="assets/img/ftth.png"></a>
+			</div>
+			<div class="column is-6 has-text-black">
+				<br>
+				<h1 class="is-size-3 has-text-centered has-text-weight-bold">Fiber To The Home</h1>
+				<p class="has-text-dark has-text-centered has-text-weight-light">-Teknologi terbaru jaringan-</p><br>
+				<strong><p class="is-size-5">Nikmati jaringan internet yang stabil menggunakan Teknologi terbaru Fiber Optic.</p></strong><br>
+				<p>EasyNet menggunakan kabel Fiber Optic untuk instalasi pemasangan agar pelanggan dapat mendapatkan kecepatan internet yang maksimal dari kami.</p>
+			</div>
+		</div>
+		<div class="columns my-4">
+			<div class="column is-12 has-text-centered">
+				<p class="is-size-2">Fiber To The Home(FTTH)</p>
+			</div>
+		</div>
+		<div class="columns my-4">
+			<div class="column is-6">
+					<div class="card-image">
+						<figure class="has-ratio" width="640" height="840"><img src="assets/img/10mbps.png"> </figure>
+					</div>
+			</div>
+			<div class="column is-6">
+					<div class="card-image">
+						<figure class="has-ratio" width="640" height="840"><img src="assets/img/20mbps.png"> </figure>
+					</div>
+			</div>
+		</div>
+		<section id="ftth">
+		<div class="columns my-2">
+			<div class="column is-12">
+				<table class="table">
+					<thead>
+						<tr>
+							<th style="width: 10%"></th>
+							<th style="width: 10%"><p class="is-size-3 has-text-centered">10 Mbps</p></th>
+							<th style="width: 10%"><p class="is-size-3 has-text-centered">20 Mbps</p></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>Upload/Download Simetris</th>
+							<td class="has-text-centered"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor" class="is-centered" viewBox="0 0 16 16">
+							<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg></td>
+							<td class="has-text-centered"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+							<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg></td>
+						</tr>
+						<tr>
+							<th>Modem Fiber Optik</th>
+							<td class="has-text-centered"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+							<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg></td>
+							<td class="has-text-centered"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+							<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg></td>
+						</tr>
+						<tr>
+							<th>Diatas 5 Perangkat</th>
+							<td></td>
+							<td class="has-text-centered"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+							<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg></td>
+						</tr>
+						<tr>
+							<th>Free Pemasangan</th>
+							<td></td>
+							<td class="has-text-centered"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+							<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg></td>
+						</tr>
+						<tr>
+							<th>Customer Service</th>
+							<td class="has-text-centered"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+							<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg></td>
+							<td class="has-text-centered"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+							<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>	
+		</section>
+<!----------------------------------------------------------MAPS------------------------------------>
+		<div class="columns has-text-centered">
+			<div class="column is-12">
+				<p class="is-size-2">Lokasi Kantor EasyNet</p>
+			</div>
+		</div>
+		<div id="map"></div>
+
+		<script type="text/javascript">
+			// Initialize and add the map
+			function initMap() {
+			  // The location of TKI
+			  const TKI = { lat: -6.969207, lng: 107.552798 };
+			  // The map, centered at TKI
+			  const map = new google.maps.Map(document.getElementById("map"), {
+			    zoom: 16,
+			    center: TKI,
+			  });
+			  // The marker, positioned at TKI
+			  const marker = new google.maps.Marker({
+			    position: TKI,
+			    map: map,
+			  });
+			}
+
+			window.initMap = initMap;
+		</script>
+
+
+<!-------------------------------------------------FAQ---------------------------------------------->
+		<div class="columns my-4">
+			<div class="column is-12 has-text-centered">
+				<p class="is-size-2">Frequently Asked Questions</p>
+			</div>
+		</div>
+		<div class="card" id="faq1">
+			<header class="card-header is-size-5">
+			    <p class="card-header-title">
+			    Bagaimana sistem berlangganan di EasyNet
+			    </p>
+				<button class="card-header-icon" aria-label="more options" v-on:click="show = !show">
+				    <span class="icon">
+				       	<i class="fas fa-angle-down"></i>
+				    </span>
+				</button>
+			</header>
+			<transition name="fade">
+			  <div class="card-content" v-if="show">
+			    <div class="content">
+			      Layanan EasyNet merupakan layanan prabayar dengan masa aktif bulanan (30 hari).
+			    </div>
+			  </div>
+			</transition>
+		</div>
+		<div class="card" id="faq2">
+			<header class="card-header is-size-5">
+			    <p class="card-header-title">
+			    Bagaimana cara berlangganan di EasyNet
+			    </p>
+				<button class="card-header-icon" aria-label="more options" v-on:click="show = !show">
+				    <span class="icon">
+				       	<i class="fas fa-angle-down"></i>
+				    </span>
+				</button>
+			</header>
+			<transition name="fade">
+			  <div class="card-content" v-if="show">
+			    <div class="content is-normal">
+			      <ul>
+			      	<li>Hubungi nomor Customer Service/Marketing kami di <a href="https://wa.me/+6281222604342?=Saya%20ingin%20berlangganan%20EasyNet.%0ANama%3A%0AAlamat%3A%0APaket%3A">Whatsapp</a></li>
+			      	<li>Konfirmasi berlangganan</li>
+			      	<li>Penjadwalan kunjungan tim teknisi</li>
+			      	<li>Kunjungan tim teknisi untuk survey tempat/rumah calon pelanggan</li>
+			      	<li>Penjadwalan pemasangan</li>
+			      	<li>Pemasangan oleh tim teknisi</li>
+			      </ul>
+			    </div>
+			  </div>
+			</transition>
+		</div>
+		<div class="card" id="faq3">
+			<header class="card-header is-size-5">
+			    <p class="card-header-title">
+			    Bagaimana sistem pembayaran di EasyNet
+			    </p>
+				<button class="card-header-icon" aria-label="more options" v-on:click="show = !show">
+				    <span class="icon">
+				       	<i class="fas fa-angle-down"></i>
+				    </span>
+				</button>
+			</header>
+			<transition name="fade">
+			  <div class="card-content" v-if="show">
+			    <div class="content">
+			      <ul>
+			      	<li>
+			      		Melalui m-Banking BCA
+			      		<ul>
+			      			<li>Masukkan 'kode akses' m-Banking anda</li>
+			      			<li>Tekan menu 'm-Transfer'</li>
+			      			<li>Tekan menu 'Antar Rekening'</li>
+			      			<li>Masukkan No. Rekening Tujuan</li>
+			      			<li class="has-text-info">379-6100-005 a/n (PT. Sinyal Bayan Hadua)</li>
+			      			<li>Masukkan jumlah sesuai dengan yang ditagihkan oleh pihak kami</li>
+			      		</ul>
+			      	</li>
+			      	<li>
+			      		Melalui m-Banking Mandiri
+			      		<ul>
+			      			<li>Lakukan login di m-Banking anda</li>
+			      			<li>Tekan menu 'Transfer'</li>
+			      			<li>Tekan menu 'Transfer ke Penerima Baru'</li>
+			      			<li>Masukkan 'nama Bank' (Bank Mandiri)</li>
+			      			<li>Masukkan 'nomor rekening'</li>
+			      			<li class="has-text-info">130-00-0000553-1 a/n (Sinyal Bayan Hadua)</li>
+			      			<li>Tekan lanjutkan</li>
+			      			<li>Masukkan Nominal yang sesuai ditagihkan oleh pihak kami</li>
+			      		</ul>
+			      	</li>
+			      </ul>
+			    </div>
+			  </div>
+			</transition>
+		</div>
+		<div class="card" id="faq4">
+			<header class="card-header is-size-5">
+			    <p class="card-header-title">
+			    Apakah ada batas pemaikaian Quota(FUP) di Easynet
+			    </p>
+				<button class="card-header-icon" aria-label="more options" v-on:click="show = !show">
+				    <span class="icon">
+				       	<i class="fas fa-angle-down"></i>
+				    </span>
+				</button>
+			</header>
+			<transition name="fade">
+			  <div class="card-content" v-if="show">
+			    <div class="content is-normal">
+			      Tidak, EasyNet tidak menerapkan sistem FUP pada semua menu pilihan pelanggan. Agar pelanggan memiliki pengalaman untuk mengakses internet/jaringan kami yang cepat secara leluasa.
+			    </div>
+			  </div>
+			</transition>
+		</div>
+		<div class="card" id="faq5">
+			<header class="card-header is-size-5">
+			    <p class="card-header-title">
+			    Apa yang harus saya lakukan jika Router di rumah saya merah
+			    </p>
+				<button class="card-header-icon" aria-label="more options" v-on:click="show = !show">
+				    <span class="icon">
+				       	<i class="fas fa-angle-down"></i>
+				    </span>
+				</button>
+			</header>
+			<transition name="fade">
+			  <div class="card-content" v-if="show">
+			    <div class="content is-normal">
+			      Segera hubungi nomor Customer Service kami di <a href="https://wa.me/+6281222604342?=Saya%20ingin%20berlangganan%20EasyNet.%0ANama%3A%0AAlamat%3A%0APaket%3A" target="_blank"> Whatsapp </a>
+			    </div>
+			  </div>
+			</transition>
+		</div>
+		<div class="card" id="faq6">
+			<header class="card-header is-size-5">
+			    <p class="card-header-title">
+			    Apakah Customer Service EasyNet beroperasi 24 Jam
+			    </p>
+				<button class="card-header-icon" aria-label="more options" v-on:click="show = !show">
+				    <span class="icon">
+				       	<i class="fas fa-angle-down"></i>
+				    </span>
+				</button>
+			</header>
+			<transition name="fade">
+			  <div class="card-content" v-if="show">
+			    <div class="content is-normal">
+			      Untuk saat ini Customer Service kami hanya beroperasi pada Jam Kerja saja.
+			    </div>
+			  </div>
+			</transition>
+		</div>
+		<div class="card" id="faq7">
+			<header class="card-header is-size-5">
+			    <p class="card-header-title">
+			    Jam Operasional kantor EasyNet
+			    </p>
+				<button class="card-header-icon" aria-label="more options" v-on:click="show = !show">
+				    <span class="icon">
+				       	<i class="fas fa-angle-down"></i>
+				    </span>
+				</button>
+			</header>
+			<transition name="fade">
+			  <div class="card-content" v-if="show">
+			    <div class="content is-normal">
+			      <ul>
+			      	<li>Weekdays
+			      		<ul>
+				      		<li>Senin: 08.00 - 17.00</li>
+				      		<li>Selasa: 08.00 - 17.00</li>
+				      		<li>Rabu: 08.00 - 17.00</li>
+				      		<li>Kamis: 08.00 - 17.00</li>
+				      		<li>Jum'at: 08.00 - 17.00</li>
+			      		</ul>
+			      	</li>
+			      	<li>Weekends
+			      		<ul>
+			      			<li>Sabtu: 08.00 - 12.00 (Staff)</li>
+			      			<li>Sabtu: 08.00 - 15.00 (Teknisi)</li>
+			      			<li>Minggu: Staff Operasional Libur</li>
+			      			<li>Minggu: 08.00 - 15.00 (Teknisi)</li>
+			      		</ul>
+			      	</li>
+			      </ul>
+			    </div>
+			  </div>
+			</transition>
+		</div>
+	</div>
+	<section id="info">
+	<footer class="footer mt-5">
+	  <div class="content has-text-centered">
+	  	<div class="columns has-text-white">
+	  		<div class="column is-4 has-text-left">
+	  			<strong class="has-text-white">Daftar Daerah</strong>
+			  	<ul>
+			  		<li><p>Citunggul</p></li>
+			  		<li><p>Cipatik (Perumahan BCI)</p></li>
+			  		<li><p>Rancamanyar (Perumahan D'Boqis)</p></li>
+			    	<li><p>Randu kurung</p></li>
+			    	<li><p>Cigondewah Hilir</p></li>
+			    	<li><p>Citiru</p></li>
+			    	<li><p>Jatisari</p></li>
+			    	<li><p>Ciharuman</p></li>
+			    	<li><p>Pameuntasan</p></li>
+			    	<li><p>Cicukang</p></li>
+			    	<li><p>Gajah Eretan</p></li>
+			    	<li><p>Bojong</p></li>
+			    	<li><p>Daraulin</p></li>
+			    	<li><p>Nanjung</p></li>
+			    </ul>
+	  		</div>
+	  		<div class="column is-4 has-text-left">
+	  			<strong class="has-text-white">Corporate</strong>
+			  	<ul>
+			    	<li>Iter Aero</li>
+			    	<li>Cempaka Hirina Snack</li>
+			    </ul>
+			    <strong class="has-text-white">Sekolah Dasar (SD)</strong>
+			    <ul>
+			    	<li>SDN Citunggul</li>
+			    	<li>SDN Pameuntasan 4</li>
+			    	<li>SDN Pameuntasan 2</li>
+			    	<li>SDN Cibodas 1</li>
+			    	<li>SDN Cikundul</li>
+			    	<li>SDN Cipendeuy</li>
+			    	<li>SDN Kopo 3</li>
+			    	<li>SDN Kopo 4</li>
+			    	<li>SDN Ciharuman</li>
+			    	<li>SDN Gajah Keramat</li>
+			    	<li>SDN Kutawaringin</li>
+			    </ul>
+	  		</div>
+	  		<div class="column is-4 has-text-left">
+	  			<strong class="has-text-white">Info Kontak</strong>
+	  			<ul>
+			    	<li><p>
+			    	<a href="https://wa.me/+62895701270735" style="color: #000000"> Marketing (Ripdan)</a></p></li>
+			    	<li><p>
+			    	<a href="https://wa.me/+628122604342" style="color: #000000"> Customer Service</a></p></li>
+			    </ul>
+	  			<strong class="has-text-white">Alamat</strong>
+	  			<p>Jl. Taman Kopo Indah 3 Blk. E No.73, Rahayu, Kec. Margaasih, Kabupaten Bandung, Jawa Barat 40218</p>
+	  			<strong class="has-text-white">E-Mail</strong>
+	  			<a href="easynet@gmail.com" style="color: #ffffff"><p>easynet@gmail.com</p></a>
+	  		</div>
+	  	</div>
+	  	<hr>
+	    <p class="has-text-white pt-5">
+	      <strong class="has-text-white">EasyNet</strong> by <a style="color: #000000" href="https://www.instagram.com/simpingsohard/" target="_blank">Finn</a>. The website build with <a style="color: #000000" href="bulma.com" target="_blank" alt="Bulma.">Bulma</a>.
+	    </p>
+	  </div>
+	</footer>
+
+<!-------------------------------------Script------------------------------------>
+
+<script type="text/javascript">
+	new Vue({
+  el: '#faq1',
+  data: {
+    show: false
+  }
+})
+	new Vue({
+  el: '#faq2',
+  data: {
+    show: false
+  }
+})
+	new Vue({
+  el: '#faq3',
+  data: {
+    show: false
+  }
+})
+new Vue({
+  el: '#faq4',
+  data: {
+    show: false
+  }
+})	
+new Vue({
+  el: '#faq5',
+  data: {
+    show: false
+  }
+})
+new Vue({
+  el: '#faq6',
+  data: {
+    show: false
+  }
+})
+new Vue({
+  el: '#faq7',
+  data: {
+    show: false
+  }
+})
+new Vue({
+  el: '#faq8',
+  data: {
+    show: false
+  }
+})
+
+window.initMap = initMap;
+</script>
+<!-----------------------Script Maps-------------------------->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"defer></script>
+
+<!-----------------------Script Maps-------------------------->
+<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+	<script>
+		bulmaCarousel.attach('#carousel-demo', {
+			slidesToScroll: 1,
+			slidesToShow: 4
+		});
+	</script>
+<!-------------------------------------END-------------------------------------------->    
+</body>
+</html>
